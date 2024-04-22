@@ -81,5 +81,12 @@ def run_onliner():
         onliner(usertoken, status)
         time.sleep(30)
 
+def handle_command(message):
+    if message.startswith("$ping"):
+        return "pong"
+    else:
+        return None
+        
+
 keep_alive()
 run_onliner()
